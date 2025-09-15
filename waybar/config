@@ -1,0 +1,43 @@
+{
+    "layer": "top",
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-center": ["sway/window"],
+    "modules-right": ["clock", "battery"],
+    "sway/window": {
+        "max-length": 50
+    },
+    "battery": {
+	"format": "{icon} ",	
+	"format-icons":["", "", "", "", "", "", "", "", "", ""],
+	"format-charging": "{icon}<span color='#a6d189'>󱐋</span>",
+},
+    "clock": {
+        "format-alt": "{:%a, %d. %b  %H:%M}"
+    },
+    "sway/title":{
+        "format": "{title}",
+    "max-length": 50,
+    "rewrite": {
+       "(.*) - Mozilla Firefox": "🌎 $1",
+       "(.*) - vim": " $1",
+       "(.*) - zsh": " [$1]"
+    }    
+    },
+    "sway/workspaces":{
+    	"format": "{icon}",
+
+	"format-icons":{
+		"1": "",
+		"2": "󰈹",
+		"3": ""
+	},
+
+	"persistent-workspaces": {
+		"1": [],
+		"2": [],
+		"3": []
+	},
+    }
+
+
+}
