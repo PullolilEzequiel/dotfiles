@@ -2,16 +2,27 @@
     "layer": "top",
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["sway/window"],
-    "modules-right": ["clock", "battery"],
+    "modules-right": ["network", "clock", "battery"],
+
+    "network":{
+    	"interface": "wlp0s21f0u7i2",
+	"format-wifi": "{icon}",
+	"format-icons": ["󰤟","󰤢", "󰤥", "󰤨"],
+    },
     "sway/window": {
         "max-length": 50
     },
     "battery": {
 	"format": "{icon} ",	
-	"format-icons":["", "", "", "", "", "", "", "", "", ""],
-	"format-charging": "{icon}<span color='#a6d189'>󱐋</span>",
-},
+	"format-icons":{
+		"default": ["", "", "", "", "", "", "", "", "", ""], 
+		"charging": ["", "", "", "", "", "","󰂄"]
+		},
+	"tooltip":true,
+	"tooltip-format": "{capacity}% {timeTo}"
+     },
     "clock": {
+    "timezone": "America/Argentina/Buenos_Aires",
         "format-alt": "{:%a, %d. %b  %H:%M}"
     },
     "sway/title":{
