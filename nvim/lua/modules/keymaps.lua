@@ -6,9 +6,8 @@ vim.keymap.set("n", "<leader>s",":w<CR>", {noremap=true, silent=true})
 vim.keymap.set("n", "<leader>q",":q<CR>", {noremap=true, silent=true})
 vim.keymap.set("n", "<leader>qs",":wq<CR>", {noremap=true, silent=true})
 
-vim.keymap.set("n", "<leader><C-e>",":NERDTreeToggle", {noremap=true, silent=true})
+vim.keymap.set("n", "<leader><C-e>",":NERDTreeToggle<CR>", {noremap=true, silent=true})
 vim.keymap.set("n", "<leader>e",":NERDTreeFocus<CR>", {noremap=true, silent=true})
-
 
 vim.keymap.set("n", "<leader>w",":tabclose<CR>", {noremap=true, silent=true})
 
@@ -22,7 +21,6 @@ vim.keymap.set("n", "<C-6>",":tabn 6<CR>", {noremap=true, silent=true})
 vim.keymap.set("n", "<C-7>",":tabn 7<CR>", {noremap=true, silent=true})
 vim.keymap.set("n", "<C-8>",":tabn 8<CR>", {noremap=true, silent=true})
 vim.keymap.set("n", "<C-9>",":tabn 9<CR>", {noremap=true, silent=true})
-
 
 -- hotreload nvim
 vim.api.nvim_set_keymap("n", "<leader>r", ":source %<CR>", { noremap = true, silent = true })
