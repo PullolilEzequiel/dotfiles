@@ -1,8 +1,5 @@
--- plugin ident config
-vim.g.indent_guides_enable_on_vim_startup = 1
-vim.g.indent_guides_auto_colors = 0
-vim.cmd([[hi IndentGuidesOdd  guibg=#5c6e7d ctermbg=67]])  -- Azul suave
-vim.cmd([[hi IndentGuidesEven guibg=#6a7c8d ctermbg=67]])  -- Azul ligeramente más claro
+
+--plugin ident config
 
 vim.cmd.syntax("on")
 vim.opt.relativenumber = true
@@ -18,3 +15,10 @@ vim.opt.smarttab = true
 
 
 vim.g.airline_theme='violet'
+vim.api.nvim_create_autocmd("TabNewEntered", {
+    callback = function()
+        vim.cmd("NERDTree")
+    end
+})
+
+
