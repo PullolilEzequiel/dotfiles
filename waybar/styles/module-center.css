@@ -1,0 +1,36 @@
+#battery {
+  font-family: "JetBrains Mono Nerd Font";
+  font-size: 22px;
+  background: @primary;
+  color: @text-primary;
+
+  padding-right: 5px;
+  margin: 5px 0;
+}
+#clock {
+  font-size: 23.1px;
+  color: @text-primary;
+  margin: 0;
+}
+.modules-center #custom-separator-start-1,
+.modules-center #custom-separator-end-1 {
+  color: @primary;
+}
+
+.modules-center #custom-separator-start-2,
+.modules-center #custom-separator-end-2 {
+  color: @secondary;
+}
+.modules-center #custom-separator-start-inv-1,
+.modules-center #custom-separator-end-inv-1 {
+  color: @secondary;
+}
+
+.modules-center #custom-separator-start-inv-2,
+.modules-center #custom-separator-end-inv-2 {
+  color: @outler;
+}
+
+#network {
+  background: @outler;
+}

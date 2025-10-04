@@ -1,0 +1,7 @@
+general.import = [
+   "~/.config/alacritty/kanagawa_dragon.toml"
+]
+
+
+[env]
+TERM = "xterm-256color"

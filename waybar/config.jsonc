@@ -1,0 +1,81 @@
+{
+  "include": ["~/.config/waybar/modules/separators.jsonc"],
+  "layer": "top",
+  "modules-left": ["sway/workspaces", "sway/mode"],
+  "modules-center": [
+    "network#up",
+    "custom/separator-start-inv-2",
+    "custom/separator-start-2",
+    "clock#time",
+    "custom/separator-start-inv-1",
+    "custom/separator-start-1",
+    "battery",
+    "custom/separator-end-1",
+    "custom/separator-end-inv-1",
+    "clock#date",
+    "custom/separator-end-2",
+    "custom/separator-end-inv-2",
+    "network#down",
+  ],
+  "modules-right": ["pulseaudio"],
+
+  "network#up": {
+    "interface": "wlan0",
+    "format-wifi": "↑ {bandwidthUpBits}",
+    "format-ethernet": "↑ {bandwidthUpBits}",
+    "interval": 1,
+  },
+
+  "network#down": {
+    "interface": "wlan0",
+    "format-wifi": "<span>↓ {bandwidthDownBits}</span>",
+    "format-ethernet": "↓ {bandwidthDownBits}",
+    "interval": 1,
+  },
+
+  "battery": {
+    "format": "{icon}",
+    "states": {
+      "warning": 15,
+    },
+    "format-icons": ["󰋙", "󰫃", "󰫄", "󰫅", "󰫆", "󰫇", "󰫈"],
+    "tooltip": true,
+    "tooltip-format": "{capacity}% {timeTo}",
+  },
+  "clock#time": {
+    "format": "<span background='#252535'>{:%H:%M}</span>",
+    "tooltip": false,
+    "timezone": "America/Argentina/Buenos_Aires",
+    "format-alt": "{:%a, %d. %b  %H:%M}",
+  },
+  "clock#date": {
+    "format": "<span background='#252535'>{:%d-%m}</span>",
+  },
+  "sway/title": {
+    "format": "{title}",
+    "max-length": 50,
+    "rewrite": {
+      "(.*) - Mozilla Firefox": "🌎 $2",
+      "(.*) - vim": " $1",
+      "(.*) - zsh": " [$1]",
+    },
+  },
+
+  "sway/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "1": "",
+      "2": "󰈹",
+      "3": "",
+    },
+    "persistent-workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+    },
+  },
+  "pulseaudio/slider": {
+    "min": 10,
+    "max": 100,
+  },
+}
