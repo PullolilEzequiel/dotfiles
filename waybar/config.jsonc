@@ -1,10 +1,19 @@
 {
-  "include": ["~/.config/waybar/modules/separators.jsonc"],
+  "include": [
+    "~/.config/waybar/modules/separators.jsonc",
+    "~/.config/waybar/modules/mediaplayer.jsonc",
+  ],
   "layer": "top",
-  "modules-left": ["sway/workspaces", "sway/mode"],
+  "modules-left": [
+    "sway/workspaces",
+    "custom/separator-end-1",
+    "custom/mediaplayer",
+    "custom/separator-end-2",
+    "sway/mode",
+  ],
   "modules-center": [
+    "custom/separator-start-3",
     "network#up",
-    "custom/separator-start-inv-2",
     "custom/separator-start-2",
     "clock#time",
     "custom/separator-start-inv-1",
@@ -14,22 +23,35 @@
     "custom/separator-end-inv-1",
     "clock#date",
     "custom/separator-end-2",
-    "custom/separator-end-inv-2",
     "network#down",
+    "custom/separator-end-3",
   ],
-  "modules-right": ["pulseaudio"],
+  "modules-right": [
+    "custom/separator-start-1",
+    "pulseaudio",
+    "custom/separator-start-2",
+    "bluetooth",
+  ],
+
+  "bluetooth": {
+    "format": "{status}",
+    "format-connected": "{icon}",
+    "format-connected-battery": "{device_alias}{device_battery_percentage}%",
+  },
 
   "network#up": {
     "interface": "wlan0",
     "format-wifi": "↑ {bandwidthUpBits}",
     "format-ethernet": "↑ {bandwidthUpBits}",
     "interval": 1,
+    "min-length": 10,
   },
 
   "network#down": {
     "interface": "wlan0",
-    "format-wifi": "<span>↓ {bandwidthDownBits}</span>",
+    "format-wifi": "{bandwidthDownBits}",
     "format-ethernet": "↓ {bandwidthDownBits}",
+    "min-length": 10,
     "interval": 1,
   },
 
@@ -43,13 +65,13 @@
     "tooltip-format": "{capacity}% {timeTo}",
   },
   "clock#time": {
-    "format": "<span background='#252535'>{:%H:%M}</span>",
+    "format": "{:%H:%M}",
     "tooltip": false,
-    "timezone": "America/Argentina/Buenos_Aires",
     "format-alt": "{:%a, %d. %b  %H:%M}",
   },
   "clock#date": {
-    "format": "<span background='#252535'>{:%d-%m}</span>",
+    "format": "{:%d-%m}",
+    "timezone": "America/Argentina/Buenos_Aires",
   },
   "sway/title": {
     "format": "{title}",
@@ -64,7 +86,7 @@
   "sway/workspaces": {
     "format": "{icon}",
     "format-icons": {
-      "1": "",
+      "1": "󰯁",
       "2": "󰈹",
       "3": "",
     },

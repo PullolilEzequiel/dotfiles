@@ -5,31 +5,23 @@
 * {
   font-family: "0xProto Nerd Font";
   font-weight: bold;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 #custom-separator-start-1,
 #custom-separator-start-2,
-#custom-separator-start-3 {
-  font-size: 23.1px;
-}
-
+#custom-separator-start-3,
 #custom-separator-end-1,
 #custom-separator-end-2,
-#custom-separator-end-3 {
-  font-size: 23.1px;
-}
-
+#custom-separator-end-3,
 #custom-separator-start-inv-1,
 #custom-separator-start-inv-2,
-#custom-separator-start-inv-3 {
-  font-size: 23.1px;
-}
-
+#custom-separator-start-inv-3,
 #custom-separator-end-inv-1,
 #custom-separator-end-inv-2,
 #custom-separator-end-inv-3 {
   font-size: 23.1px;
+  margin: 5px 0;
 }
 
 #custom-notification {
@@ -43,7 +35,6 @@ window#waybar {
 }
 
 window#waybar > box {
-  margin: 4px;
   background: @background;
 }
 
@@ -53,45 +44,6 @@ tooltip {
   font-size: 13px;
   border-radius: 7px;
   border: 2px solid #101a24;
-}
-#workspaces {
-  background: rgba(23, 23, 23, 0);
-  color: #888789;
-  box-shadow: none;
-  text-shadow: none;
-  border-radius: 9px;
-  transition: 0.2s ease;
-  padding-left: 4px;
-  padding-right: 4px;
-  padding-top: 1px;
-}
-
-#workspaces button {
-  background: rgba(23, 23, 23, 0);
-  color: #a1bdce;
-  box-shadow: none;
-  text-shadow: none;
-  border-radius: 9px;
-  transition: 0.2s ease;
-  padding-left: 4px;
-  padding-right: 4px;
-  /*   animation: ws_normal 20s ease-in-out 1; */
-}
-
-#workspaces button.active {
-  /* background-image: url("/home/anik/Documents/bar1.png");*/
-  color: #a1bdce;
-  transition: all 0.3s ease;
-  padding-left: 4px;
-  padding-right: 4px;
-  /*  transition: all 0.4s cubic-bezier(.55,0.68,.48,1.682); */
-}
-
-#workspaces button:hover {
-  background: none;
-  color: #72d792;
-  animation: ws_hover 20s ease-in-out 1;
-  transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.682);
 }
 
 #taskbar button {
@@ -230,11 +182,6 @@ tooltip {
   animation-direction: alternate;
 }
 
-@keyframes blink {
-  to {
-    color: #4a4a4a;
-  }
-}
 #custom-notifications,
 #custom-spotify,
 #taskbar,
@@ -317,42 +264,6 @@ tooltip {
   padding: 1px;
 }
 
-#custom-r_end {
-  border-radius: 0px 7px 7px 0px;
-  margin-right: 1px;
-  padding-right: 3px;
-}
-
-#custom-l_end {
-  border-radius: 7px 0px 0px 7px;
-  margin-left: 1px;
-  padding-left: 3px;
-}
-
-#custom-sr_end {
-  border-radius: 0px;
-  margin-right: 1px;
-  padding-right: 3px;
-}
-
-#custom-sl_end {
-  border-radius: 0px;
-  margin-left: 1px;
-  padding-left: 3px;
-}
-
-#custom-rr_end {
-  border-radius: 0px 7px 7px 0px;
-  margin-right: 1px;
-  padding-right: 3px;
-}
-
-#custom-rl_end {
-  border-radius: 7px 0px 0px 7px;
-  margin-left: 1px;
-  padding-left: 3px;
-}
-
 /* Style for launchers */
 
 #custom-expand {
@@ -364,4 +275,13 @@ tooltip {
 #group-minimized {
   border-left: solid;
   border-left-width: 0.5;
+}
+
+button {
+  border-radius: 16px;
+  padding: 0 10px;
+}
+button:hover {
+  background-color: @hover-bg;
+  color: @hover-fg;
 }
