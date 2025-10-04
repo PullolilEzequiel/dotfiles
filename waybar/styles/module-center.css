@@ -45,5 +45,6 @@
 
 #network {
   background: @outler;
+  color: @background;
   margin: 5px 0;
 }
