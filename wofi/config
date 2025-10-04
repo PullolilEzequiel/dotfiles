@@ -21,3 +21,4 @@ insensitive=false
 [style]
 use-gtk-theme = false
 style = ~/.config/wofi/style.css
+
