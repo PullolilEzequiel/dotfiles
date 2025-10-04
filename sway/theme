@@ -36,11 +36,12 @@ client.placeholder       $dragonGray  $dragonBlack3 $fujiWhite   $dragonGray   $
 client.background        $dragonBlack3
 
 
-#set $cursor_theme "ArcAurora-cursors"
-#set $cursor_size 24
+set $cursor_theme "ArcDusk-cursors"
+set $cursor_size 24
 
-#seat seat0 xcursor_theme $cursor_theme $cursor_size
+seat seat0 xcursor_theme $cursor_theme $cursor_size
 
 
 
-#output * bg ~/.config/background/wallpaper.png fill
+output * bg ./background.png fill
+
