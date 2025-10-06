@@ -1,0 +1,107 @@
+{
+  "include": [
+    "~/.config/waybar/modules/separators.jsonc",
+    "~/.config/waybar/modules/mediaplayer.jsonc",
+  ],
+  "layer": "top",
+  "modules-left": [
+    "sway/workspaces",
+    "custom/separator-end-1",
+    "custom/mediaplayer",
+    "custom/separator-end-2",
+    "sway/mode",
+    "custom/separator-end-3",
+  ],
+  "modules-center": [
+    "custom/separator-start-3",
+    "network#up",
+    "custom/separator-start-2",
+    "clock#time",
+    "custom/separator-start-inv-1",
+    "custom/separator-start-1",
+    "battery",
+    "custom/separator-end-1",
+    "custom/separator-end-inv-1",
+    "clock#date",
+    "custom/separator-end-2",
+    "network#down",
+    "custom/separator-end-3",
+  ],
+  "modules-right": [
+    "custom/separator-start-1",
+    "pulseaudio",
+    "custom/separator-start-2",
+    "bluetooth",
+  ],
+
+  "bluetooth": {
+    "format": "{status}",
+    "format-connected": "{icon}",
+    "format-connected-battery": "{device_alias}{device_battery_percentage}%",
+  },
+
+  "network#up": {
+    "interface": "wlan0",
+    "format-wifi": "↑ {bandwidthUpBits}",
+    "format-ethernet": "↑ {bandwidthUpBits}",
+    "interval": 1,
+    "min-length": 10,
+    "max-length": 10,
+  },
+
+  "network#down": {
+    "interface": "wlan0",
+    "format-wifi": "{bandwidthDownBits}",
+    "format-ethernet": "↓ {bandwidthDownBits}",
+    "min-length": 10,
+    "max-length": 10,
+    "interval": 1,
+  },
+
+  "battery": {
+    "format": "{icon}",
+    "states": {
+      "warning": 15,
+    },
+    "format-icons": ["󰋙", "󰫃", "󰫄", "󰫅", "󰫆", "󰫇", "󰫈"],
+    "tooltip": true,
+    "tooltip-format": "{capacity}% {timeTo}",
+  },
+  "clock#time": {
+    "format": "{:%H:%M}",
+    "tooltip": false,
+    "format-alt": "{:%a, %d. %b  %H:%M}",
+    "timezone": "America/Argentina/Buenos_Aires",
+  },
+  "clock#date": {
+    "format": "{:%d-%m}",
+    "timezone": "America/Argentina/Buenos_Aires",
+  },
+  "sway/title": {
+    "format": "{title}",
+    "max-length": 50,
+    "rewrite": {
+      "(.*) - Mozilla Firefox": "🌎 $2",
+      "(.*) - vim": " $1",
+      "(.*) - zsh": " [$1]",
+    },
+  },
+
+  "sway/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "1": "󰯁",
+      "2": "󰈹",
+      "3": "",
+    },
+    "persistent-workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+    },
+  },
+  "pulseaudio/slider": {
+    "min": 10,
+    "max": 100,
+  },
+}

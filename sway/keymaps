@@ -1,0 +1,6 @@
+set $menu /home/ezequiel_bk/.config/rofi/launchers/type-6/launcher.sh
+bindsym $mod+d exec ($menu drun)
+
+
+bindsym $mod+tab exec ($menu window)
+

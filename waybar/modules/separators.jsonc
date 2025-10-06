@@ -1,0 +1,55 @@
+{
+  "custom/separator-start-1": {
+    "format": "",
+    "tooltip": false,
+  },
+  "custom/separator-start-2": {
+    "format": "",
+    "tooltip": false,
+  },
+  "custom/separator-start-3": {
+    "format": "",
+    "tooltip": false,
+  },
+
+  /*-------------------
+		end separators
+	-------------------*/
+
+  "custom/separator-end-inv-1": {
+    "format": "",
+  },
+
+  "custom/separator-start-inv-1": {
+    "format": "",
+  },
+
+  "custom/separator-end-inv-2": {
+    "format": "",
+  },
+
+  "custom/separator-start-inv-2": {
+    "format": "",
+  },
+
+  "custom/separator-end-inv-3": {
+    "format": "",
+  },
+
+  "custom/separator-start-inv-3": {
+    "format": "",
+  },
+
+  "custom/separator-end-1": {
+    "format": "",
+    "tooltip": false,
+  },
+  "custom/separator-end-2": {
+    "format": "",
+    "tooltip": false,
+  },
+  "custom/separator-end-3": {
+    "format": "",
+    "tooltip": false,
+  },
+}

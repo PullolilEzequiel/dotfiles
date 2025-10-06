@@ -1,0 +1,47 @@
+set $fujiWhite   #C5C9C5
+set $sakuraPink  #D27E99
+set $autumnRed   #C34043
+set $roninYellow #C0A36E
+set $waveAqua1   #6A9589
+set $waveAqua2   #7AA89F
+set $dragonBlue  #658594
+set $crystalBlue #7E9CD8
+set $oniViolet   #957FB8
+set $fujiGray    #727169
+set $springViolet1 #938AA9
+set $springViolet2 #9CABCA
+set $springBlue  #7FB4CA
+set $springGreen #98BB6C
+set $dragonBlack0 #181616
+set $dragonBlack1 #0D0C0C
+set $dragonBlack2 #12120F
+set $dragonBlack3 #1D1C19
+set $dragonBlack4 #181616
+set $dragonGray   #727169
+set $dragonOrange #FFA066
+set $dragonGreen  #76946A
+set $dragonPink   #D27E99
+set $dragonYellow #FF9E3B
+set $dragonRed    #C34043
+set $dragonAqua   #6A9589
+set $dragonPurple #957FB8
+set $dragonBlue2  #7FB4CA
+
+# target                 title        bg            text         indicator     border
+client.focused           $crystalBlue $dragonBlack3 $fujiWhite   $sakuraPink   $dragonOrange
+client.focused_inactive  $dragonGray  $dragonBlack3 $fujiWhite   $sakuraPink   $dragonGray
+client.unfocused         $dragonGray  $dragonBlack3 $fujiWhite   $sakuraPink   $dragonGray
+client.urgent            $dragonOrange $dragonBlack3 $dragonOrange $fujiGray   $dragonRed
+client.placeholder       $dragonGray  $dragonBlack3 $fujiWhite   $dragonGray   $dragonGray
+client.background        $dragonBlack3
+
+
+set $cursor_theme "ArcDusk-cursors"
+set $cursor_size 24
+
+seat seat0 xcursor_theme $cursor_theme $cursor_size
+
+
+
+output * bg ./background.png fill
+

@@ -1,0 +1,33 @@
+.modules-left #custom-separator-end-1 {
+  color: @outler;
+  background: @secondary;
+}
+.modules-left #custom-separator-end-2 {
+  color: @secondary;
+  background: @background;
+}
+
+#workspaces {
+  background: @outler;
+  color: @text-primary;
+  margin: 5px 0;
+  border: 0;
+}
+#workspaces button.focused {
+  background: @background;
+  color: @primary-text;
+}
+#workspaces button {
+  box-shadow: none;
+  text-shadow: none;
+}
+
+#workspaces button:hover {
+}
+
+#custom-mediaplayer {
+  color: @selection-text;
+  background: @secondary;
+  margin: 5px 0;
+  font-size: 12px;
+}
